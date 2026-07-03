@@ -13,10 +13,13 @@ for i in range(5):
 
 		print(data["setup"])
 		print(data["punchline"])
+		
 	except requests.exceptions.ConnectionError:
 		print("Error: no internet connection.")
+		
 	except requests.exceptions.Timeout:
 		print("Error: Request timed out.")
+		
 	except Exception as e:
 		print(f"Something went wrong: {e}")
 	
